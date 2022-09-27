@@ -73,7 +73,7 @@ var_dump($TotalProducts);
 
 echo 'Prodotti nel carrello: ' . count($TotalProducts) . '<br>';
 $tot = 0;
-foreach($TotalProducts as $key=>$value){
+foreach($TotalProducts as $value){
     $tot += $value->price;
 }
 
