@@ -11,7 +11,7 @@ $FoodData = [
     'categories' => 'alimento secco per cani',
     'weight' => 1.5 . ' kg',
     'deadline' => '20/10/2023',
-    'price' => 13.99 .' euro',
+    'price' => 13.99 ,
 ];
 
 $CollarData = [
@@ -22,6 +22,7 @@ $CollarData = [
     'categories' => 'accessori per cani',
     'size' => 'M',
     'material' => 'leather',
+    'price' => 25.50 ,
 
 ];
 
@@ -33,6 +34,8 @@ $BibData = [
     'categories' => 'accessori per cani',
     'size' => 'M',
     'material' => 'cotton',
+    'price' => 39.99 ,
+
 ];
 
 $KongData = [
@@ -41,16 +44,37 @@ $KongData = [
     'description' => 'Gioco educativo per cani',
     'brand' => 'Kong',
     'categories' => 'giochi per cani',
+    'price' => 17.99 ,
+
 ];
 
 // food
 $crocchette = new Food($FoodData);
-var_dump($crocchette);
+// var_dump($crocchette);
+
 // accessories
 $collare = new Accessories($CollarData);
-var_dump($collare);
+// var_dump($collare);
 $pettorina = new Accessories($BibData);
-var_dump($pettorina);
+// var_dump($pettorina);
+
 // toys
 $kong = new Toy($KongData);
-var_dump($kong);
+// var_dump($kong);
+
+$TotalProducts =[
+    $crocchette,
+    $collare,
+    $pettorina,
+    $kong,
+];
+
+var_dump($TotalProducts);
+
+echo 'Prodotti nel carrello: ' . count($TotalProducts) . '<br>';
+$tot = 0;
+foreach($TotalProducts as $key=>$value){
+    $tot += $value->price;
+}
+
+echo '<br>' . 'Prezzo finale : ' . $tot . 'euro';

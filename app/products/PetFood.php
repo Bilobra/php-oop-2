@@ -5,7 +5,7 @@ class Food extends Product{
 
     public $weight;
     public $deadline;
-    public $price;
+    
 
     public function __construct($param)
     {
@@ -13,7 +13,6 @@ class Food extends Product{
 
         $this-> weight = $param['weight'];
         $this-> deadline =  $param['deadline'];
-        $this-> price = $param['price'];
 
     }
 
