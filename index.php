@@ -9,9 +9,9 @@ $FoodData = [
     'description' => 'Crocchette alpesce per cani di taglia media',
     'brand' => 'Forza 10',
     'categories' => 'alimento secco per cani',
-    // 'weight' => 1.5 . 'kg',
-    // 'deadline' => '20/10/2023',
-    // 'price' => 13.99 .'euro',
+    'weight' => 1.5 . ' kg',
+    'deadline' => '20/10/2023',
+    'price' => 13.99 .' euro',
 ];
 
 $CollarData = [
@@ -20,6 +20,9 @@ $CollarData = [
     'description' => 'Collare in pelle colorata per cani da caccia',
     'brand' => 'Hunter',
     'categories' => 'accessori per cani',
+    'size' => 'M',
+    'material' => 'leather',
+
 ];
 
 $BibData = [
@@ -28,6 +31,8 @@ $BibData = [
     'description' => 'Pettorina H multicolor',
     'brand' => 'Haqihana',
     'categories' => 'accessori per cani',
+    'size' => 'M',
+    'material' => 'cotton',
 ];
 
 $KongData = [
