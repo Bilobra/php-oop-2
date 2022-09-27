@@ -7,6 +7,7 @@ class Product {
     public $brand;
     public $categories;
     public $price;
+    public $quantity;
 
     // function __construct($name,$poster, $description, $weight, $volume, $brand, $categories,$price = 0)
     function __construct($param)
@@ -18,6 +19,7 @@ class Product {
         $this->brand = $param['brand'];
         $this->categories = $param['categories'];
         $this->price = $param['price'];
+        $this->quantity = $param['quantity'];
         // $this->weight = $param['weight'];
         // $this->volume = $param['volume'];
     }

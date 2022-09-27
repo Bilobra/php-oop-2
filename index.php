@@ -2,6 +2,7 @@
 include_once __DIR__ . '/app/products/PetFood.php';
 include_once __DIR__ . '/app/products/PetAccessories.php';
 include_once __DIR__ . '/app/products/PetToy.php';
+include_once __DIR__ . '/app/products/Order.php';
 
 $FoodData = [
     'name' => "Crocchtte al pesce",
@@ -12,6 +13,7 @@ $FoodData = [
     'weight' => 1.5 . ' kg',
     'deadline' => '20/10/2023',
     'price' => 13.99 ,
+    'quantity' => 2,
 ];
 
 $CollarData = [
@@ -23,6 +25,8 @@ $CollarData = [
     'size' => 'M',
     'material' => 'leather',
     'price' => 25.50 ,
+    'quantity' => 1,
+
 
 ];
 
@@ -35,6 +39,8 @@ $BibData = [
     'size' => 'M',
     'material' => 'cotton',
     'price' => 39.99 ,
+    'quantity' => 1,
+
 
 ];
 
@@ -45,6 +51,8 @@ $KongData = [
     'brand' => 'Kong',
     'categories' => 'giochi per cani',
     'price' => 17.99 ,
+    'quantity' => 2,
+
 
 ];
 
@@ -71,10 +79,22 @@ $TotalProducts =[
 
 var_dump($TotalProducts);
 
-echo 'Prodotti nel carrello: ' . count($TotalProducts) . '<br>';
-$tot = 0;
-foreach($TotalProducts as $value){
-    $tot += $value->price;
-}
+$Order1 = new Order($TotalProducts);
+$Order1->getTotalPrice();
+$Order1->getTotalQuantity();
 
-echo '<br>' . 'Prezzo finale : ' . $tot . 'euro';
+// var_dump($Order1);
+echo 'prezzo totale : ' . $Order1->TotPrice . ' euro' . '<br>';
+echo 'pezzi nel carrello : ' . $Order1->TotQuantity ;
+
+
+
+
+
+// echo 'Prodotti nel carrello: ' . count($TotalProducts) . '<br>';
+// $tot = 0;
+// foreach($TotalProducts as $value){
+//     $tot += $value->price;
+// }
+
+// echo '<br>' . 'Prezzo finale : ' . $tot . 'euro';
