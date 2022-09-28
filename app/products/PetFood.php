@@ -18,7 +18,7 @@ class Food extends Product{
         $this-> weight = $param['weight'];
         $this-> deadline =  $param['deadline'];
         
-        $this->setMarket($market);
+        $this->getMarket();
        
     }
 

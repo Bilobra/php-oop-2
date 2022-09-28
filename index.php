@@ -57,7 +57,7 @@ $KongData = [
 ];
 
 // food
-$crocchette = new Food($FoodData);
+$crocchette = new Food($FoodData,'gigi');
 // var_dump($crocchette);
 
 // accessories
