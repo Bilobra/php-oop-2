@@ -79,22 +79,19 @@ $TotalProducts =[
 
 var_dump($TotalProducts);
 
-$Order1 = new Order($TotalProducts);
-$Order1->getTotalPrice();
-$Order1->getTotalQuantity();
 
-// var_dump($Order1);
-echo 'prezzo totale : ' . $Order1->TotPrice . ' euro' . '<br>';
-echo 'pezzi nel carrello : ' . $Order1->TotQuantity ;
+$Order = new Order('Giulia',$TotalProducts);
+$Order->getTotalPrice();
+$Order->getTotalQuantity();
 
 
 
+// var_dump($Order);
+echo 'Ciao ' . $Order->name_user .'<br>';
+echo ' Hai: ' . $Order->TotQuantity . ' pezzi nel carrello,' . '<br>';
+echo ' Il prezzo totale è : ' . $Order->TotPrice . ' euro' . '<br>';
 
 
-// echo 'Prodotti nel carrello: ' . count($TotalProducts) . '<br>';
-// $tot = 0;
-// foreach($TotalProducts as $value){
-//     $tot += $value->price;
-// }
 
-// echo '<br>' . 'Prezzo finale : ' . $tot . 'euro';
+
+
