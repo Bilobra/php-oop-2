@@ -4,7 +4,7 @@ trait Market
 {
     public $market;
 
-    protected function setMarket($market)
+    public function setMarket($market)
     {
         if(is_string($market))
         {

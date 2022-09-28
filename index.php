@@ -70,16 +70,16 @@ $pettorina = new Accessories($BibData);
 
 
 // toys
+$kong = new Toy($KongData);
 try{
+    $kong->setMarket(3);
 
-    $kong = new Toy($KongData);
     
 }catch(Exception $e){
     echo $e->getMessage();
 };
 // var_dump($kong);
 
-// $kong->setMarket(3);
 
 
 
