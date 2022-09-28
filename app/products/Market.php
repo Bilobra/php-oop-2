@@ -2,14 +2,21 @@
 
 trait Market
 {
-    public $market = 'Animal House Market';
+    public $market;
 
-    // public function setMarket($market)
-    // {
-    //     $this->market = $market;
-    // }
-    public function getMarket()
+    protected function setMarket($market)
     {
-        return $this->market;
+        if(is_string($market))
+        {
+            $this->market = $market;
+
+        }else{
+            throw new Exception('$market is not valid!');
+
+        }
     }
+    // public function getMarket()
+    // {
+    //     return $this->market;
+    // }
 }

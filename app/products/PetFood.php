@@ -11,14 +11,16 @@ class Food extends Product{
     public $deadline;
     
 
-    public function __construct($param,$market)
+    public function __construct($param,$market = 'Animal House Market')
     {
-        parent::__construct($param,$market);
+        parent::__construct($param);
 
         $this-> weight = $param['weight'];
         $this-> deadline =  $param['deadline'];
         
-        $this->getMarket();
+        // $this->market = $market;
+        $this->setMarket($market);
+
        
     }
 

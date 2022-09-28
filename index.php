@@ -3,6 +3,7 @@ include_once __DIR__ . '/app/products/PetFood.php';
 include_once __DIR__ . '/app/products/PetAccessories.php';
 include_once __DIR__ . '/app/products/PetToy.php';
 include_once __DIR__ . '/app/products/Order.php';
+include_once __DIR__ . '/app/products/Market.php';
 
 $FoodData = [
     'name' => "Crocchtte al pesce",
@@ -57,7 +58,7 @@ $KongData = [
 ];
 
 // food
-$crocchette = new Food($FoodData,'gigi');
+$crocchette = new Food($FoodData);
 // var_dump($crocchette);
 
 // accessories
@@ -66,9 +67,22 @@ $collare = new Accessories($CollarData);
 $pettorina = new Accessories($BibData);
 // var_dump($pettorina);
 
+
+
 // toys
-$kong = new Toy($KongData);
+try{
+
+    $kong = new Toy($KongData);
+    
+}catch(Exception $e){
+    echo $e->getMessage();
+};
 // var_dump($kong);
+
+// $kong->setMarket(3);
+
+
+
 
 $TotalProducts =[
     $crocchette,
@@ -80,7 +94,7 @@ $TotalProducts =[
 var_dump($TotalProducts);
 
 
-$Order = new Order('Giulia',$TotalProducts);
+$Order = new Order('Giuggiolo',$TotalProducts);
 $Order->getTotalPrice();
 $Order->getTotalQuantity();
 

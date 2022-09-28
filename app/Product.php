@@ -10,7 +10,7 @@ class Product {
     public $quantity;
 
     // function __construct($name,$poster, $description, $weight, $volume, $brand, $categories,$price = 0)
-    function __construct($param)
+    public function __construct($param)
 
     {
         $this->name = $param['name'];
